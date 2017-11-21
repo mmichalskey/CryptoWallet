@@ -25,7 +25,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".main {\r\n    margin: 3.0rem;\r\n}", ""]);
+exports.push([module.i, ".main {\r\n    margin: 3.0rem;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -241,7 +241,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main role=\"main\">\n  <div class=\"jumbotron text-center\">\n    <div class=\"container\">\n      <h1 class=\"display-3\">CryptoWallet</h1>\n      <p>Witaj w symulatorze giełdy krypto walut. Sprawdź swoje możliwości rejestrując się bądź logując na swoje konto.</p>\n    </div>\n    <div *ngIf=\"!authService.loggedIn()\">\n      <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Rejestracja</a>\n      <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Logowanie</a>\n    </div>\n  </div>\n\n\n\n  <div class=\"\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n        <div class=\"col-md-4\">\n          <h2>Bądź na bierząco</h2>\n          <p>Symulator pozwola na grę w oparciu o aktualne notowania kryptowaluty Bitcoin, więc zawsze będziesz na bierząco!</p>\n        </div>\n        <div class=\"col-md-4\">\n          <h2>Poszerzaj horyzonty</h2>\n          <p>Nie stać cię na realne inwestycje, a chesz sprawdzić swoje możliwości inwestując na giełdzie? A może interesuje Cię kopanie BitCoinów To miejsce dla Ciebie!</p>\n\n        </div>\n        <div class=\"col-md-4\">\n          <h2>Graj ze znajomymi</h2>\n          <p>Symulator to nie tylko inwerstowanie w kryptowaluty, to także handel z przyjaciółmi, wymiana strategii oraz wspólne inwestycje.</p>\n\n        </div>\n      </div>\n\n      \n\n    </div> <!-- /container -->\n</main>\n"
+module.exports = "<main role=\"main\">\n  <div class=\"jumbotron text-center\">\n    <div class=\"container\">\n      <h1>CryptoWallet</h1>\n      <p>Witaj w symulatorze giełdy krypto walut. Sprawdź swoje możliwości rejestrując się bądź logując na swoje konto.</p>\n    </div>\n    <div *ngIf=\"!authService.loggedIn()\">\n      <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Rejestracja</a>\n      <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Logowanie</a>\n    </div>\n  </div>\n\n\n\n  <div class=\"\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n        <div class=\"col-md-4\">\n          <h2>Bądź na bierząco</h2>\n          <p>Symulator pozwola na grę w oparciu o aktualne notowania kryptowaluty Bitcoin, więc zawsze będziesz na bierząco!</p>\n        </div>\n        <div class=\"col-md-4\">\n          <h2>Poszerzaj horyzonty</h2>\n          <p>Nie stać cię na realne inwestycje, a chesz sprawdzić swoje możliwości inwestując na giełdzie? A może interesuje Cię kopanie BitCoinów To miejsce dla Ciebie!</p>\n\n        </div>\n        <div class=\"col-md-4\">\n          <h2>Graj ze znajomymi</h2>\n          <p>Symulator to nie tylko inwerstowanie w kryptowaluty, to także handel z przyjaciółmi, wymiana strategii oraz wspólne inwestycje.</p>\n\n        </div>\n      </div>\n\n      \n\n    </div> <!-- /container -->\n</main>\n"
 
 /***/ }),
 
@@ -430,7 +430,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\n    <a class=\"navbar-brand\" [routerLink]=\"['/']\" href=\"#\">CryptoWallet</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" style=\"\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarColor\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\">\n          <a [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]= \"{exacrt: true}\" [routerLink]=\"['/profile']\" class=\"nav-link\" href=\"#\">Profil <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\">\n          <a [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]= \"{exacrt: true}\" [routerLink]=\"['/dashboard']\" class=\"nav-link\" href=\"#\">Portfel <span class=\"sr-only\">(current)</span></a>\n        </li>\n      </ul>\n      <ul class=\"navbar-nav my-2 my-lg-0\">\n        <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\">\n          <a [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]= \"{exacrt: true}\" [routerLink]=\"['/login']\"  class=\"nav-link\" href=\"#\">Logowanie</a>\n        </li>\n        <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\">\n          <a [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]= \"{exacrt: true}\" [routerLink]=\"['/register']\"  class=\"nav-link\" href=\"#\">Rejestracja</a>\n        </li>\n        <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\">\n          <a (click)=\"onLogoutClick()\" [routerLink]=\"['/login']\" class=\"nav-link\" href=\"#\">Wyloguj</a>\n        </li>\n      </ul>\n    </div>\n  </nav>"
+module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\" href=\"#\">CryptoWallet</a>\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n          <span class=\"sr-only\">Toggle navigation</span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n    </div>\n    <div id=\"navbar\" class=\"navbar-collapse collapse\">\n      <ul class=\"nav navbar-nav\">\n        <li *ngIf=\"authService.loggedIn()\" >\n          <a [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exacrt: true}\" [routerLink]=\"['/profile']\" \n            href=\"#\">Profil <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li *ngIf=\"authService.loggedIn()\" >\n          <a [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exacrt: true}\" [routerLink]=\"['/dashboard']\" \n            href=\"#\">Portfel <span class=\"sr-only\">(current)</span></a>\n        </li>\n      </ul>\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li *ngIf=\"!authService.loggedIn()\" >\n          <a [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exacrt: true}\" [routerLink]=\"['/login']\" \n            href=\"#\">Logowanie</a>\n        </li>\n        <li *ngIf=\"!authService.loggedIn()\" >\n          <a [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exacrt: true}\" [routerLink]=\"['/register']\" \n            href=\"#\">Rejestracja</a>\n        </li>\n        <li *ngIf=\"authService.loggedIn()\" >\n          <a (click)=\"onLogoutClick()\" [routerLink]=\"['/login']\"  href=\"#\">Wyloguj</a>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>"
 
 /***/ }),
 
@@ -818,14 +818,14 @@ var AuthService = (function () {
     AuthService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        //return this.http.post('http://localhost:3001/users/register', user, {headers: headers})
+        // return this.http.post('http://localhost:8080/users/register', user, {headers: headers})
         return this.http.post('/users/register', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        // return this.http.post('http://localhost:3001/users/authenticate', user, {headers: headers})
+        // return this.http.post('http://localhost:8080/users/authenticate', user, {headers: headers})
         return this.http.post('/users/authenticate', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
@@ -834,7 +834,7 @@ var AuthService = (function () {
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        // return this.http.get('http://localhost:3001/users/profile', {headers: headers})
+        // return this.http.get('http://localhost:8080/users/profile', {headers: headers})
         return this.http.get('/users/profile', { headers: headers })
             .map(function (res) { return res.json(); });
     };
